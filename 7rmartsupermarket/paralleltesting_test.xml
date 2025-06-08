@@ -11,7 +11,7 @@
   <test  name="Test2">
   
     <classes>
-      <class name="testScript.ManageContactTest"/>
+      <class name="testScript.ManageFooterTextTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

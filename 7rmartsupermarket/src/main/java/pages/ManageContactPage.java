@@ -19,7 +19,7 @@ public WebDriver driver;
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath="//a[contains(@href,'tes.com/admin/list-contact')]")WebElement info;
+	//@FindBy(xpath="//a[contains(@href,'tes.com/admin/list-contact')]")WebElement info;
 	@FindBy(xpath="//i[@class='fas fa-edit']")WebElement editbutton;
 	@FindBy(xpath="//input[@id='email']")WebElement email;
 	@FindBy(xpath="//input[@type='text' and @id='phone']")WebElement phone;
@@ -31,44 +31,50 @@ public WebDriver driver;
 	//@FindBy(xpath="//button[@class='btn btn-block-sm btn-info']")WebElement update;
 	//@FindBy(xpath="//button[@type='submit' and @name='Update']")WebElement update;
 	@FindBy(xpath="//div[@class='alert alert-success alert-dismissible']")WebElement alert;
-		public void moreInfo()
+		/*public void moreInfoContactPage()
 		{
 		
 			info.click();
-		}
-		public void editMethod()
+		}*/
+		public ManageContactPage editMethod()
 		{
 			
 			editbutton.click();
+			return this;
 		}
-		public void phone(String phoneno)
+		public ManageContactPage phone(String phoneno)
 		{
 			
 			phone.clear();
 			phone.sendKeys(phoneno);
+			return this;
 		} 
-		public void editEmailField(String mail)
+		public ManageContactPage editEmailField(String mail)
 		{
 			email.clear();
 			email.sendKeys(mail);
+			return this;
 		}
-		public void address(String enteraddress)
+		public ManageContactPage address(String enteraddress)
 		{
 			address.clear();
 			address.sendKeys(enteraddress);
+			return this;
 		}
-		public void deliveryTime(String deltime)
+		public ManageContactPage deliveryTime(String deltime)
 		{
 			deliverytime.clear();
 			deliverytime.sendKeys(deltime);
+			return this;
 		}
-		public void deliveryChargeLimit(String deltimelimit)
+		public ManageContactPage deliveryChargeLimit(String deltimelimit)
 		{
 			deliverychargelimit.clear();
 			deliverychargelimit.sendKeys(deltimelimit);
+			return this;
 		}
 		
-		public void updateMethod()
+		public ManageContactPage updateMethod()
 		{
 			//JavascriptExecutor js=(JavascriptExecutor) driver;
 			//js.executeScript("argument[0].click();", update);
@@ -77,6 +83,7 @@ public WebDriver driver;
 			//update.click();
 			Actions actions=new Actions(driver);//action class
 			actions.click(update).build().perform();
+			return this;
 		}
 		public boolean isAlertDisplayed()
 		{

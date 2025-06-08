@@ -7,7 +7,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class ManageFooterTextPage {
-	@FindBy(xpath="//a[contains(@href,'qassosiates.com/admin/list-footertext')]")WebElement info;
+	//@FindBy(xpath="//a[contains(@href,'qassosiates.com/admin/list-footertext')]")WebElement info;
 	@FindBy(xpath="//a[contains(@href,'m/admin/Footertext/edit?edit=1')]")WebElement edit;
 	@FindBy(xpath="//textarea[@id='content' and @placeholder='Enter the Address']")WebElement address;
 	@FindBy(xpath="//input[@id='email' and @name='email']")WebElement email;
@@ -20,41 +20,46 @@ public class ManageFooterTextPage {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
-	public void moreInfo()
+	/*public void moreInfoFooterPage()
 	{
 		info.click();
-	}
-	public void editMethod()
+	}*/
+	public ManageFooterTextPage editMethod()
 	{
 		edit.click();
+		return this;
 	}
-	public void address(String enteraddress)
+	public ManageFooterTextPage address(String enteraddress)
 	{
 		address.clear();
 		address.sendKeys(enteraddress);
+		return this;
 	} 
-	public void editEmailField(String mail)
+	public ManageFooterTextPage editEmailField(String mail)
 	{
 		email.clear();
 		email.sendKeys(mail);
+		return this;
 	}
-	public void phone(String phoneno)
+	public ManageFooterTextPage phone(String phoneno)
 	{
 		
 		phone.clear();
 		phone.sendKeys(phoneno);
+		return this;
 	}
-	public void updateMethod()
+	public ManageFooterTextPage updateMethod()
 	{
 		Actions actions=new Actions(driver);//action class
 		actions.click(update).build().perform();
+		return this;
 	}
 	public boolean isAlertDisplayed()
 	{
 		return alert.isDisplayed();
 		
 }
-	public void isUpdateButtonDisplayed()
+	public ManageFooterTextPage isUpdateButtonDisplayed()
 	{
 		if(update.isDisplayed())
 		{
@@ -65,5 +70,6 @@ public class ManageFooterTextPage {
 			update.click();
 			System.out.println("Update button is displayed");
 		}
+		return this;
 	}	
 }

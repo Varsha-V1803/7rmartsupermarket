@@ -6,6 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.LoginPage;
 import utilities.ExcelUtility;
 
@@ -13,7 +14,7 @@ public class LoginTest extends Base {
 	/*public LoginTest(WebDriver driver) {
 		// TODO Auto-generated constructor stub
 	}*/
-	@Test(groups= {"regression"},retryAnalyzer=retry.Retry.class)//retry-package
+	@Test(groups= {"regression"},description="Verify whether the user is able to login to the application with correct username and correct password sucessfully",retryAnalyzer=retry.Retry.class)//retry-package
 	
 	public void loginTest() throws IOException//testcase is given and inside that credentials are given
 	{
@@ -26,9 +27,10 @@ public class LoginTest extends Base {
 	loginpage.enterThePassword(password);
 	loginpage.clickTheSignInButton();
 	boolean ishomepageavailable=loginpage.isDashboardDisplay();
-	Assert.assertTrue(ishomepageavailable);
+	Assert.assertTrue(ishomepageavailable,Constant.LOGINCORRECTUSERNAMECORRECTPASSWORD);
 	}
-	@Test
+	@Test(description="Verify whether the user is able to login to the application with incorrect username and correct password sucessfully")
+	
 	public void loginTest1()//testcase is given and inside that credentials are given
 	{
 	String username="abcd";//credentials of false username and true password
@@ -38,9 +40,9 @@ public class LoginTest extends Base {
 	loginpage.enterThePassword(password);
 	loginpage.clickTheSignInButton();
 	boolean isalertavailable=loginpage.isAlertDisplay();
-	Assert.assertTrue(isalertavailable);
+	Assert.assertTrue(isalertavailable,Constant.LOGININCOORECTUSERNAMECORRECTPASSWORD);
 	}
-	@Test
+	@Test(description="Verify whether the user is able to login to the application with correct username and incorrect password sucessfully")
 	public void loginTest2()//testcase is given and inside that credentials are given
 	{
 	String username="admin";//credentials of T username and F password
@@ -50,9 +52,9 @@ public class LoginTest extends Base {
 	loginpage.enterThePassword(password);
 	loginpage.clickTheSignInButton();
 	boolean isalertavailable=loginpage.isAlertDisplay();
-	Assert.assertTrue(isalertavailable);
+	Assert.assertTrue(isalertavailable,Constant.LOGININCORRECTUSERNAMEINCORRECTPASSWORD);
 	}
-	@Test
+	@Test(description="Verify whether the user is able to login to the application with incorrect username and incorrect password sucessfully")
 	public void loginTest3()//testcase is given and inside that credentials are given
 	{
 	String username="admin12";//credentials of F username and F password
@@ -62,6 +64,6 @@ public class LoginTest extends Base {
 	loginpage.enterThePassword(password);
 	loginpage.clickTheSignInButton();
 	boolean isalertavailable=loginpage.isAlertDisplay();
-	Assert.assertTrue(isalertavailable);
+	Assert.assertTrue(isalertavailable,Constant.LOGININCORRECTUSERNAMEINCORRECTPASSWORD);
 	}
 }

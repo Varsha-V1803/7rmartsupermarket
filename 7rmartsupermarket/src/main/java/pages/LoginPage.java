@@ -19,17 +19,20 @@ public class LoginPage {
 	@FindBy(xpath="//p[text()='Dashboard']")WebElement dashboardField;
 	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")WebElement alert;//page factor)WebElement usernameField;//page factor
 	
-	public void enterTheUsername(String usernamevalue)
+	public LoginPage enterTheUsername(String usernamevalue)
 	{
 		usernameField.sendKeys(usernamevalue);
+		return this;
 	}	
-	public void enterThePassword(String passwordvalue)
+	public LoginPage enterThePassword(String passwordvalue)
 	{
 		passwordField.sendKeys(passwordvalue);
+		return this;
 	}
-	public void clickTheSignInButton()
+	public HomePage clickTheSignInButton()
 	{
 		signField.click();
+		return new HomePage(driver);
 	}
 	public boolean isDashboardDisplay()
 	{

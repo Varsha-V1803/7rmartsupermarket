@@ -5,12 +5,16 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
 import pages.AdminUsersPage;
+import pages.HomePage;
 import pages.LoginPage;
 import utilities.FakerUtility;
 
 public class AdminUsersTest extends Base {
-	@Test(groups= {"regression"},retryAnalyzer=retry.Retry.class)
+	AdminUsersPage adminuserspage;
+	HomePage homepage;
+	@Test(groups= {"regression"},description="Verify whether the user is able to add a new information in the adminusers page sucessfully",retryAnalyzer=retry.Retry.class)
 public void adminUsersTest()
 {
 		String username="admin";//credentials
@@ -23,15 +27,16 @@ public void adminUsersTest()
 		LoginPage loginpage=new LoginPage(driver);//we need to pass the credentials to the loginpage so create obj of login page and pass driver as an arg
 		loginpage.enterTheUsername(username);
 		loginpage.enterThePassword(password);
-		loginpage.clickTheSignInButton();
-		AdminUsersPage obj=new AdminUsersPage(driver);
-		obj.moreInfo();
-		obj.newMethod();
-		obj.enterTheUsername(user);
-		obj.enterThePassword(userpass);
-		obj.selectTheUserType();
-		obj.save();
-		boolean isalertavailable=obj.isAlertDisplay();
-		Assert.assertTrue(isalertavailable);
+		homepage=loginpage.clickTheSignInButton();
+		//AdminUsersPage obj=new AdminUsersPage(driver);
+		adminuserspage=homepage.moreInfoAdminUserPage();
+		adminuserspage.newMethod().enterTheUsername(user).enterThePassword(userpass).selectTheUserType().save();//chaining
+		//adminusertest.enterTheUsername(user);
+		//adminusertest.enterThePassword(userpass);
+		//adminusertest.selectTheUserType();
+		//adminusertest.save();
+		boolean isalertavailable=adminuserspage.isAlertDisplay();
+		Assert.assertTrue(isalertavailable,Constant.ADMINUSERSADDINFOERROR);
 }
 }
+

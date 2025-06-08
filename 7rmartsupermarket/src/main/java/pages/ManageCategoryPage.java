@@ -16,7 +16,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class ManageCategoryPage {
-	@FindBy(xpath="//a[contains(@href,'/admin/list-category')]")WebElement info;
+	//@FindBy(xpath="//a[contains(@href,'/admin/list-category')]")WebElement info;
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-danger' and @onclick='click_button(1)']")WebElement newbutton;
 	@FindBy(xpath="//input[@id='category' and @name='category']")WebElement cat;
 	@FindBy(xpath="//li[@id='134-selectable']")WebElement selectgroups;
@@ -32,23 +32,26 @@ public class ManageCategoryPage {
 		this.driver=driver;
 		PageFactory.initElements(driver, this);
 	}
-	public void moreInfo()
+	/*public void moreInfoManageCategory()
 	{
 		info.click();
-	}
-	public void newMethod()
+	}*/
+	public ManageCategoryPage newMethod()
 	{
 		newbutton.click();
+		return this;
 	}
-	public void category(String categoryname)
+	public ManageCategoryPage category(String categoryname)
 	{
 		cat.sendKeys(categoryname);
+		return this;
 	} 
-	public void selectGroups()
+	public ManageCategoryPage selectGroups()
 	{
 		selectgroups.click();
+		return this;
 	}
-	public void imageFile() throws AWTException
+	public ManageCategoryPage imageFile() throws AWTException
 	{
 		/*WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(imgfile));//A wait of 10s is applied to the button,explicit wait
@@ -65,6 +68,7 @@ public class ManageCategoryPage {
 		rob.keyRelease(KeyEvent.VK_V);//if  key is pressed it needs to be released
 		rob.keyPress(KeyEvent.VK_ENTER);
 		rob.keyRelease(KeyEvent.VK_ENTER);
+		return this;
 				
 	}
 	/*public void showOnTopMenu()
@@ -77,11 +81,12 @@ public class ManageCategoryPage {
 	}*/	
 	
 	
-	public void saveMethod()
+	public ManageCategoryPage saveMethod()
 	{
 		//savebutton.click();
 		Actions actions=new Actions(driver);//action class
 		actions.click(savebutton).build().perform();
+		return null;
 	}
 	public boolean isAlertDisplayed()
 	{

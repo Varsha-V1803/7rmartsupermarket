@@ -41,7 +41,7 @@ public void browserIntialization(String browser)throws Exception//method used fo
 	driver.manage().window().maximize();//used to maximize the window
 	
 }
-	@AfterMethod(alwaysRun=true)
+	@AfterMethod(alwaysRun=true)//given for regression
 //	public void driverQuitAndClose() 
 	//{
 //	driver.quit();//used to close all the open windows

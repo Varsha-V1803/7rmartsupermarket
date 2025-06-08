@@ -3,45 +3,44 @@ package testScript;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import constant.Constant;
+import pages.AdminUsersPage;
+import pages.HomePage;
 import pages.LoginPage;
 import pages.ManageContactPage;
 import pages.ManageFooterTextPage;
 import pages.ManageNewsPage;
 
 public class ManageFooterTextTest extends Base {
-	@Test
+	ManageFooterTextPage managefootertextpage;
+	HomePage homepage;
+	@Test(description="Verify whether the user is able to add a new information to the manage footer page sucessfully")
  public void manageFooterTextTest()
  {
 	 String username="admin";//credentials
 		String password="admin"; 
 		LoginPage loginpage=new LoginPage(driver);//we need to pass the credentials to the loginpage so create obj of login page and pass driver as an arg
-		loginpage.enterTheUsername(username);
-		loginpage.enterThePassword(password);
-		loginpage.clickTheSignInButton();
-		ManageFooterTextPage obj= new ManageFooterTextPage(driver);
+		loginpage.enterTheUsername(username).enterThePassword(password);
+		homepage=loginpage.clickTheSignInButton();
+		//ManageFooterTextPage obj= new ManageFooterTextPage(driver);
 		String add="Megha land,ktym";
 		String mailid="varsha123@gmail.com";
 		String mob="77889900455";
-		obj.moreInfo();
-		obj.editMethod();
-		obj.address(add);
-		obj.editEmailField(mailid);
-		obj.phone(mob);
-		obj.updateMethod();
-		boolean isalertavailable=obj.isAlertDisplayed();
-		Assert.assertTrue(isalertavailable);
+		managefootertextpage=homepage.moreInfoFooterPage();
+		managefootertextpage.editMethod().address(add).editEmailField(mailid).phone(mob).updateMethod();
+		boolean isalertavailable=managefootertextpage.isAlertDisplayed();
+		Assert.assertTrue(isalertavailable,Constant.MANAGEFOOTERADDINFOERROR);
  }
-	@Test
+	@Test(description="Verify whether the user is able to view the updatebutton in manage footer page sucessfully")
 	public void  manageFooterTextTestUpdateButtonDisplay()
 
 	{
 		String username="admin";//credentials
 		String password="admin"; 
 		LoginPage loginpage=new LoginPage(driver);//we need to pass the credentials to the loginpage so create obj of login page and pass driver as an arg
-		loginpage.enterTheUsername(username);
-		loginpage.enterThePassword(password);
-		loginpage.clickTheSignInButton();
-		ManageFooterTextPage obj= new ManageFooterTextPage(driver);
-		obj.isUpdateButtonDisplayed();
+		loginpage.enterTheUsername(username).enterThePassword(password);
+		homepage=loginpage.clickTheSignInButton();
+		//ManageFooterTextPage obj= new ManageFooterTextPage(driver);
+		managefootertextpage.isUpdateButtonDisplayed();
 	}
 }

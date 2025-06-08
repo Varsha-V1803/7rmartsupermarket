@@ -3,6 +3,7 @@ package pages;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.Select;
@@ -16,7 +17,7 @@ public AdminUsersPage(WebDriver driver) {
 	PageFactory.initElements(driver, this);
 }
 	//@FindBy(xpath="//a[contains(@href,'tes.com/admin/list-admin') and ]")WebElement info;
-	@FindBy(xpath="//a[contains(@href,'tes.com/admin/list-admin')and @class='small-box-footer']")WebElement info;
+	//@FindBy(xpath="//a[contains(@href,'tes.com/admin/list-admin')and @class='small-box-footer']")WebElement info;
 	@FindBy(xpath="//a[@onclick='click_button(1)']")WebElement newbutton;
 	@FindBy(xpath="//input[@id='username']")WebElement usernames;
 	@FindBy(xpath="//input[@id='password']")WebElement passwords;
@@ -24,33 +25,40 @@ public AdminUsersPage(WebDriver driver) {
 	@FindBy(xpath="//button[@name='Create']")WebElement savebutton;
 	@FindBy(xpath="//div[@class='alert alert-danger alert-dismissible']")WebElement alert;
 	
-	public void moreInfo()
+	/*public void moreInfoAdminUserPage()
 	{
 		info.click();
-	}
-	public void newMethod()
+	}*/
+	public AdminUsersPage newMethod()
 	{
 		newbutton.click();
+		return this;
 	}
-	public void enterTheUsername(String user)
+	public AdminUsersPage enterTheUsername(String user)
 	{
 		usernames.sendKeys(user);
+		return this;
 	}
-	public void enterThePassword(String pass)
+	public AdminUsersPage enterThePassword(String pass)
 	{
 		passwords.sendKeys(pass);
+		return this;
 	}
-	public void selectTheUserType()
+	public AdminUsersPage selectTheUserType()
 	{
-		//Select select=new Select(usertypes);
-		//select.selectByIndex(2);
-		PageUtility page=new PageUtility();
-		page.selectByIndex(alert, 0);
+		Select select=new Select(usertypes);
+		select.selectByIndex(2);
+		//PageUtility page=new PageUtility();
+		//page.selectByIndex(alert, 0);
+		return this;
 	
 	}
-	public void save()
+	public AdminUsersPage save()
 	{
-		savebutton.click();
+		Actions actions=new Actions(driver);//action class
+		actions.click(savebutton).build().perform();
+		//savebutton.click();
+		return this;
 	}
 	public boolean isAlertDisplay()
 	{
