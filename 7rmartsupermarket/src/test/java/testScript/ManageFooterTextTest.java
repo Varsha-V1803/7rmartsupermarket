@@ -15,7 +15,7 @@ public class ManageFooterTextTest extends Base {
 	ManageFooterTextPage managefootertextpage;
 	HomePage homepage;
 	@Test(description="Verify whether the user is able to add a new information to the manage footer page sucessfully")
- public void manageFooterTextTest()
+ public void verifyWhetherUserIsAbleToCreateNewFooterTextInformation()
  {
 	 String username="admin";//credentials
 		String password="admin"; 
@@ -32,7 +32,7 @@ public class ManageFooterTextTest extends Base {
 		Assert.assertTrue(isalertavailable,Constant.MANAGEFOOTERADDINFOERROR);
  }
 	@Test(description="Verify whether the user is able to view the updatebutton in manage footer page sucessfully")
-	public void  manageFooterTextTestUpdateButtonDisplay()
+	public void  verifyWhetherUserIsAbleToDisplayFooterTextUpdateButton()
 
 	{
 		String username="admin";//credentials

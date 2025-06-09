@@ -46,10 +46,10 @@ public AdminUsersPage(WebDriver driver) {
 	}
 	public AdminUsersPage selectTheUserType()
 	{
-		Select select=new Select(usertypes);
-		select.selectByIndex(2);
-		//PageUtility page=new PageUtility();
-		//page.selectByIndex(alert, 0);
+		//Select select=new Select(usertypes);
+		//select.selectByIndex(2);
+		PageUtility page=new PageUtility();
+		page.selectByIndex(usertypes, 0);
 		return this;
 	
 	}

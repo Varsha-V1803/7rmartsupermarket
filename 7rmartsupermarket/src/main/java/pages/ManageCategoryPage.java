@@ -15,6 +15,8 @@ import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import utilities.PageUtility;
+
 public class ManageCategoryPage {
 	//@FindBy(xpath="//a[contains(@href,'/admin/list-category')]")WebElement info;
 	@FindBy(xpath="//a[@class='btn btn-rounded btn-danger' and @onclick='click_button(1)']")WebElement newbutton;
@@ -53,11 +55,13 @@ public class ManageCategoryPage {
 	}
 	public ManageCategoryPage imageFile() throws AWTException
 	{
+		PageUtility pageutility=new PageUtility();
+		pageutility.click(driver, imgfile);
 		/*WebDriverWait wait = new WebDriverWait(driver,Duration.ofSeconds(10));
 		wait.until(ExpectedConditions.elementToBeClickable(imgfile));//A wait of 10s is applied to the button,explicit wait
 		imgfile.click();*/
-		Actions actions=new Actions(driver);//action class
-		actions.click(imgfile).build().perform();
+		//Actions actions=new Actions(driver);//action class
+		//actions.click(imgfile).build().perform();
 		StringSelection stringselect=new StringSelection("\"C:\\Users\\user\\Downloads\\Zipperbottle.jpg\"");//creating obj for StringSelection class
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringselect, null);//Toolkit is class and 3 of the are its methods like getDefaultToolkit().getSystemClipboard().setContents(stringselect, null) ,the path of the pdf are copied to clipboard
 		Robot rob=new Robot();//creating obj for Robot class

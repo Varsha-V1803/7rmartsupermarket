@@ -6,10 +6,10 @@ import pages.LoginPage;
 import pages.HomePage;
 import pages.ManageNewsPage;
 
-public class HomeTest extends Base {
+public class HomePageTest extends Base {
 	HomePage homepage;
-	@Test(description="Verify whether the user is able to logout from the homepage sucessfully")
-public void HomeTest()
+	@Test(description="Verify whether the user is able to logout sucessfully")
+public void verifyWhetherUserIsAbleToLogout()
 {
 	String username="admin";//credentials
 	String password="admin"; 

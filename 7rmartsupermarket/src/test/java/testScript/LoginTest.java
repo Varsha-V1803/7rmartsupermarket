@@ -16,7 +16,7 @@ public class LoginTest extends Base {
 	}*/
 	@Test(groups= {"regression"},description="Verify whether the user is able to login to the application with correct username and correct password sucessfully",retryAnalyzer=retry.Retry.class)//retry-package
 	
-	public void loginTest() throws IOException//testcase is given and inside that credentials are given
+	public void verifyWhetherUserIsAbleToLoginWithCorrectUsernameCorrectPassword() throws IOException//testcase is given and inside that credentials are given
 	{
 	//String username="admin";//credentials
 	//String password="admin"; 
@@ -31,7 +31,7 @@ public class LoginTest extends Base {
 	}
 	@Test(description="Verify whether the user is able to login to the application with incorrect username and correct password sucessfully")
 	
-	public void loginTest1()//testcase is given and inside that credentials are given
+	public void verifyWhetherUserIsAbleToLoginWithInCorrectUsernameCorrectPassword()//testcase is given and inside that credentials are given
 	{
 	String username="abcd";//credentials of false username and true password
 	String password="admin"; 
@@ -43,7 +43,7 @@ public class LoginTest extends Base {
 	Assert.assertTrue(isalertavailable,Constant.LOGININCOORECTUSERNAMECORRECTPASSWORD);
 	}
 	@Test(description="Verify whether the user is able to login to the application with correct username and incorrect password sucessfully")
-	public void loginTest2()//testcase is given and inside that credentials are given
+	public void verifyWhetherUserIsAbleToLoginWithCorrectUsernameInCorrectPassword()//testcase is given and inside that credentials are given
 	{
 	String username="admin";//credentials of T username and F password
 	String password="admin123"; 
@@ -55,7 +55,7 @@ public class LoginTest extends Base {
 	Assert.assertTrue(isalertavailable,Constant.LOGININCORRECTUSERNAMEINCORRECTPASSWORD);
 	}
 	@Test(description="Verify whether the user is able to login to the application with incorrect username and incorrect password sucessfully")
-	public void loginTest3()//testcase is given and inside that credentials are given
+	public void verifyWhetherUserIsAbleToLoginWithInCorrectUsernameInCorrectPassword()//testcase is given and inside that credentials are given
 	{
 	String username="admin12";//credentials of F username and F password
 	String password="admin34"; 

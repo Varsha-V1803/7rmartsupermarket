@@ -13,7 +13,7 @@ public class ManageContactTest extends Base {
 	ManageContactPage managecontactpage;
 	HomePage homepage;
 	@Test(description="Verify whether the user is able to add a new contact informationto the manage contact page sucessfully")
-	public void manageContactTest()
+	public void verifyWhetherUserIsAbleToCreateNewContactInformation()
 	
 		{
 			String username="admin";//credentials

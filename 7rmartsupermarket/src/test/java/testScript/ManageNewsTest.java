@@ -12,7 +12,7 @@ public class ManageNewsTest extends Base {
 	ManageNewsPage managenewspage;//global dln of page obj
 	HomePage homepage;
 @Test(description="Verify whether the user is able to add a new news inforamtion to the manage news page sucessfully")
-public void manageNewsTest()
+public void verifyWhetherUserIsAbleToCreateNewsInformation()
 
 {
 	String username="admin";//credentials
@@ -33,7 +33,7 @@ public void manageNewsTest()
 	Assert.assertTrue(isalertavailable,Constant.MANAGENEWSADDINFOERROR);
 }
 @Test(description="Verify whether the user is able to delete a news inforamtion from the manage news page sucessfully")
-public void manageNewsTestNewsDelete()
+public void verifyWhetherUserIsAbleToDeleteNewsInformation()
 
 {
 	String username="admin";//credentials
@@ -48,7 +48,7 @@ public void manageNewsTestNewsDelete()
 	Assert.assertTrue(isalertavailable,Constant.MANAGENEWSDLTINFOERROR);
 }
 @Test(description="Verify whether the user is able to view the save button in the manage news page sucessfully")
-public void manageNewsTestSaveButtonDisplay()
+public void verifyWhetherUserIsAbleToDisplayManageNewsUpdateButton()
 
 {
 	String username="admin";//credentials

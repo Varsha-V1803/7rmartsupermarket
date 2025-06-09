@@ -15,7 +15,7 @@ public class AdminUsersTest extends Base {
 	AdminUsersPage adminuserspage;
 	HomePage homepage;
 	@Test(groups= {"regression"},description="Verify whether the user is able to add a new information in the adminusers page sucessfully",retryAnalyzer=retry.Retry.class)
-public void adminUsersTest()
+public void verifyWhetherUserIsAbleToCreateNewAdminUser()
 {
 		String username="admin";//credentials
 		String password="admin"; 
