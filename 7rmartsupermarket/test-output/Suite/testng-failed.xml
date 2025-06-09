@@ -7,13 +7,13 @@
   <test thread-count="5" name="Test(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="testScript.AdminUsersTest">
+      <class name="testScript.ManageFooterTextTest">
         <methods>
-          <include name="verifyWhetherUserIsAbleToCreateNewAdminUser"/>
+          <include name="verifyWhetherUserIsAbleToDisplayFooterTextUpdateButton"/>
           <include name="browserQuit"/>
           <include name="browserIntialization"/>
         </methods>
-      </class> <!-- testScript.AdminUsersTest -->
+      </class> <!-- testScript.ManageFooterTextTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

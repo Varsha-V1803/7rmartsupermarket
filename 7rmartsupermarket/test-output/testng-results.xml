@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="1" failed="2" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-06-09T13:01:24 IST" name="paralleltesting" finished-at="2025-06-09T13:01:33 IST" duration-ms="8632">
+  <suite started-at="2025-06-09T22:19:03 IST" name="Suite" finished-at="2025-06-09T22:19:21 IST" duration-ms="18187">
     <groups>
     </groups>
-    <test started-at="2025-06-09T13:01:24 IST" name="Test2" finished-at="2025-06-09T13:01:32 IST" duration-ms="7684">
+    <test started-at="2025-06-09T22:19:03 IST" name="Test" finished-at="2025-06-09T22:19:21 IST" duration-ms="18187">
       <class name="testScript.ManageFooterTextTest">
-        <test-method is-config="true" signature="browserIntialization(java.lang.String)[pri:0, instance:testScript.ManageFooterTextTest@7dcf94f8]" started-at="2025-06-09T13:01:24 IST" name="browserIntialization" finished-at="2025-06-09T13:01:28 IST" duration-ms="3173" status="PASS">
+        <test-method is-config="true" signature="browserIntialization(java.lang.String)[pri:0, instance:testScript.ManageFooterTextTest@210ab13f]" started-at="2025-06-09T22:19:03 IST" name="browserIntialization" finished-at="2025-06-09T22:19:05 IST" duration-ms="2695" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,62 +18,22 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserIntialization -->
-        <test-method signature="verifyWhetherUserIsAbleToCreateNewFooterTextInformation()[pri:0, instance:testScript.ManageFooterTextTest@7dcf94f8]" started-at="2025-06-09T13:01:28 IST" name="verifyWhetherUserIsAbleToCreateNewFooterTextInformation" description="Verify whether the user is able to add a new information to the manage footer page sucessfully" finished-at="2025-06-09T13:01:28 IST" duration-ms="301" status="FAIL">
-          <exception class="org.apache.poi.EmptyFileException">
-            <message>
-              <![CDATA[The supplied file was empty (zero bytes long)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.apache.poi.EmptyFileException: The supplied file was empty (zero bytes long)
-at org.apache.poi.util.IOUtils.peekFirstNBytes(IOUtils.java:149)
-at org.apache.poi.poifs.filesystem.FileMagic.valueOf(FileMagic.java:209)
-at org.apache.poi.openxml4j.opc.internal.ZipHelper.verifyZipHeader(ZipHelper.java:147)
-at org.apache.poi.openxml4j.opc.internal.ZipHelper.openZipStream(ZipHelper.java:191)
-at org.apache.poi.openxml4j.opc.ZipPackage.<init>(ZipPackage.java:156)
-at org.apache.poi.openxml4j.opc.OPCPackage.open(OPCPackage.java:363)
-at org.apache.poi.ooxml.util.PackageHelper.open(PackageHelper.java:67)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:315)
-at org.apache.poi.xssf.usermodel.XSSFWorkbook.<init>(XSSFWorkbook.java:289)
-at utilities.ExcelUtility.getStringData(ExcelUtility.java:23)
-at testScript.ManageFooterTextTest.verifyWhetherUserIsAbleToCreateNewFooterTextInformation(ManageFooterTextTest.java:25)
-at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
-at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.apache.poi.EmptyFileException -->
+        <test-method signature="verifyWhetherUserIsAbleToCreateNewFooterTextInformation()[pri:0, instance:testScript.ManageFooterTextTest@210ab13f]" started-at="2025-06-09T22:19:05 IST" name="verifyWhetherUserIsAbleToCreateNewFooterTextInformation" description="Verify whether the user is able to add a new information to the manage footer page sucessfully" finished-at="2025-06-09T22:19:08 IST" duration-ms="2648" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyWhetherUserIsAbleToCreateNewFooterTextInformation -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testScript.ManageFooterTextTest@7dcf94f8]" started-at="2025-06-09T13:01:28 IST" name="browserQuit" finished-at="2025-06-09T13:01:28 IST" duration-ms="154" status="PASS">
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testScript.ManageFooterTextTest@210ab13f]" started-at="2025-06-09T22:19:08 IST" name="browserQuit" finished-at="2025-06-09T22:19:08 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyWhetherUserIsAbleToCreateNewFooterTextInformation status=FAILURE method=ManageFooterTextTest.verifyWhetherUserIsAbleToCreateNewFooterTextInformation()[pri:0, instance:testScript.ManageFooterTextTest@7dcf94f8] output={null}]]]>
+                <![CDATA[[TestResult name=verifyWhetherUserIsAbleToCreateNewFooterTextInformation status=SUCCESS method=ManageFooterTextTest.verifyWhetherUserIsAbleToCreateNewFooterTextInformation()[pri:0, instance:testScript.ManageFooterTextTest@210ab13f] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserQuit -->
-        <test-method is-config="true" signature="browserIntialization(java.lang.String)[pri:0, instance:testScript.ManageFooterTextTest@7dcf94f8]" started-at="2025-06-09T13:01:28 IST" name="browserIntialization" finished-at="2025-06-09T13:01:31 IST" duration-ms="2817" status="PASS">
+        <test-method is-config="true" signature="browserIntialization(java.lang.String)[pri:0, instance:testScript.ManageFooterTextTest@210ab13f]" started-at="2025-06-09T22:19:08 IST" name="browserIntialization" finished-at="2025-06-09T22:19:10 IST" duration-ms="2033" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -84,14 +44,48 @@ at java.base/java.lang.Thread.run(Thread.java:1583)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- browserIntialization -->
-        <test-method signature="verifyWhetherUserIsAbleToDisplayFooterTextUpdateButton()[pri:0, instance:testScript.ManageFooterTextTest@7dcf94f8]" started-at="2025-06-09T13:01:31 IST" name="verifyWhetherUserIsAbleToDisplayFooterTextUpdateButton" description="Verify whether the user is able to view the updatebutton in manage footer page sucessfully" finished-at="2025-06-09T13:01:31 IST" duration-ms="451" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+        <test-method signature="verifyWhetherUserIsAbleToDisplayFooterTextUpdateButton()[pri:0, instance:testScript.ManageFooterTextTest@210ab13f]" started-at="2025-06-09T22:19:10 IST" name="verifyWhetherUserIsAbleToDisplayFooterTextUpdateButton" description="Verify whether the user is able to view the updatebutton in manage footer page sucessfully" finished-at="2025-06-09T22:19:20 IST" duration-ms="10539" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Cannot invoke "pages.ManageFooterTextPage.isUpdateButtonDisplayed()" because "this.managefootertextpage" is null]]>
+              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//button[@type='submit' and @name='Update']"}
+  (Session info: chrome=137.0.7151.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e85af346786f87641e1355856bd4c676, findElement {using=xpath, value=//button[@type='submit' and @name='Update']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52445}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52445/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e85af346786f87641e1355856bd4c676]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "pages.ManageFooterTextPage.isUpdateButtonDisplayed()" because "this.managefootertextpage" is null
-at testScript.ManageFooterTextTest.verifyWhetherUserIsAbleToDisplayFooterTextUpdateButton(ManageFooterTextTest.java:49)
+              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//button[@type='submit' and @name='Update']"}
+  (Session info: chrome=137.0.7151.69)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: '4.18.1', revision: 'b1d3319b48'
+System info: os.name: 'Windows 11', os.arch: 'amd64', os.version: '10.0', java.version: '21.0.5'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [e85af346786f87641e1355856bd4c676, findElement {using=xpath, value=//button[@type='submit' and @name='Update']}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 137.0.7151.69, chrome: {chromedriverVersion: 137.0.7151.68 (2989ffee9373..., userDataDir: C:\Users\user\AppData\Local...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52445}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52445/devtoo..., se:cdpVersion: 137.0.7151.69, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: e85af346786f87641e1355856bd4c676
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486)
+at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+at jdk.proxy2/jdk.proxy2.$Proxy15.isDisplayed(Unknown Source)
+at pages.ManageFooterTextPage.isUpdateButtonDisplayed(ManageFooterTextPage.java:74)
+at testScript.ManageFooterTextTest.verifyWhetherUserIsAbleToDisplayFooterTextUpdateButton(ManageFooterTextTest.java:58)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -106,23 +100,29 @@ at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 at org.testng.TestRunner.privateRun(TestRunner.java:848)
 at org.testng.TestRunner.run(TestRunner.java:621)
 at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner$SuiteWorker.run(SuiteRunner.java:481)
-at org.testng.internal.thread.ThreadUtil.lambda$execute$0(ThreadUtil.java:58)
-at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:317)
-at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1144)
-at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
-at java.base/java.lang.Thread.run(Thread.java:1583)
+at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
+at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
+at org.testng.SuiteRunner.run(SuiteRunner.java:336)
+at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
+at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
+at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
+at org.testng.TestNG.runSuites(TestNG.java:1114)
+at org.testng.TestNG.run(TestNG.java:1082)
+at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
+at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:293)
+at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:91)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyWhetherUserIsAbleToDisplayFooterTextUpdateButton -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testScript.ManageFooterTextTest@7dcf94f8]" started-at="2025-06-09T13:01:31 IST" name="browserQuit" finished-at="2025-06-09T13:01:32 IST" duration-ms="737" status="PASS">
+        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testScript.ManageFooterTextTest@210ab13f]" started-at="2025-06-09T22:19:20 IST" name="browserQuit" finished-at="2025-06-09T22:19:21 IST" duration-ms="199" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=verifyWhetherUserIsAbleToDisplayFooterTextUpdateButton status=FAILURE method=ManageFooterTextTest.verifyWhetherUserIsAbleToDisplayFooterTextUpdateButton()[pri:0, instance:testScript.ManageFooterTextTest@7dcf94f8] output={null}]]]>
+                <![CDATA[[TestResult name=verifyWhetherUserIsAbleToDisplayFooterTextUpdateButton status=FAILURE method=ManageFooterTextTest.verifyWhetherUserIsAbleToDisplayFooterTextUpdateButton()[pri:0, instance:testScript.ManageFooterTextTest@210ab13f] output={null}]]]>
               </value>
             </param>
           </params>
@@ -130,36 +130,6 @@ at java.base/java.lang.Thread.run(Thread.java:1583)
           </reporter-output>
         </test-method> <!-- browserQuit -->
       </class> <!-- testScript.ManageFooterTextTest -->
-    </test> <!-- Test2 -->
-    <test started-at="2025-06-09T13:01:24 IST" name="Test1" finished-at="2025-06-09T13:01:33 IST" duration-ms="8632">
-      <class name="testScript.ManageContactTest">
-        <test-method is-config="true" signature="browserIntialization(java.lang.String)[pri:0, instance:testScript.ManageContactTest@130d63be]" started-at="2025-06-09T13:01:24 IST" name="browserIntialization" finished-at="2025-06-09T13:01:28 IST" duration-ms="3263" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[chrome]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserIntialization -->
-        <test-method signature="verifyWhetherUserIsAbleToCreateNewContactInformation()[pri:0, instance:testScript.ManageContactTest@130d63be]" started-at="2025-06-09T13:01:28 IST" name="verifyWhetherUserIsAbleToCreateNewContactInformation" description="Verify whether the user is able to add a new contact informationto the manage contact page sucessfully" finished-at="2025-06-09T13:01:33 IST" duration-ms="5309" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- verifyWhetherUserIsAbleToCreateNewContactInformation -->
-        <test-method is-config="true" signature="browserQuit(org.testng.ITestResult)[pri:0, instance:testScript.ManageContactTest@130d63be]" started-at="2025-06-09T13:01:33 IST" name="browserQuit" finished-at="2025-06-09T13:01:33 IST" duration-ms="3" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=verifyWhetherUserIsAbleToCreateNewContactInformation status=SUCCESS method=ManageContactTest.verifyWhetherUserIsAbleToCreateNewContactInformation()[pri:0, instance:testScript.ManageContactTest@130d63be] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- browserQuit -->
-      </class> <!-- testScript.ManageContactTest -->
-    </test> <!-- Test1 -->
-  </suite> <!-- paralleltesting -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

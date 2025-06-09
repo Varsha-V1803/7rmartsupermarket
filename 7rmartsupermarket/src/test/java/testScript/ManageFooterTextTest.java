@@ -34,7 +34,7 @@ public class ManageFooterTextTest extends Base {
 		String mob = "77889900455";*/
 		String add = ExcelUtility.getStringData(1, 0, "managefooterpage");
 		String mailid = ExcelUtility.getStringData(1, 1, "managefooterpage");
-		String mob = ExcelUtility.getStringData(1, 2, "managefooterpage");
+		String mob = ExcelUtility.getIntegerData(1, 2, "managefooterpage");
 		
 		managefootertextpage = homepage.moreInfoFooterPage();
 		managefootertextpage.editMethod().address(add).editEmailField(mailid).phone(mob).updateMethod();

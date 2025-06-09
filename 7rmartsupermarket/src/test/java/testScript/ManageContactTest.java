@@ -36,7 +36,7 @@ public class ManageContactTest extends Base {
 		String time = "20";
 		String delchargelmt = "30";*/
 		String mailid = ExcelUtility.getStringData(1, 0, "managecontactpage");//excel data read
-		String mob = ExcelUtility.getStringData(1, 1, "managecontactpage");
+		String mob = ExcelUtility.getIntegerData(1, 1, "managecontactpage");
 		String add = ExcelUtility.getStringData(1, 2, "managecontactpage");
 		String time = ExcelUtility.getIntegerData(1, 3, "managecontactpage");
 		String delchargelmt = ExcelUtility.getIntegerData(1, 4, "managecontactpage");

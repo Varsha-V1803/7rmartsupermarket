@@ -28,7 +28,7 @@
        </include>
        </methods>
        </class>-->
-			<class name="testScript.ManageNewsTest" />
+			<class name="testScript.ManageFooterTextTest" />
 		</classes>
 	</test> <!--
 	Test -->
