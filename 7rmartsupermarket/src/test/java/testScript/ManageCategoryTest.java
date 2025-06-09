@@ -29,10 +29,11 @@ public class ManageCategoryTest extends Base {
 		loginpage.enterTheUsername(username).enterThePassword(password);
 		homepage = loginpage.clickTheSignInButton();
 		// ManageCategoryPage obj= new ManageCategoryPage(driver);
-		String name = "Zipper Bottle";
+		//String product = "Zipper Bottle";
+		String product = ExcelUtility.getStringData(1, 0, "managecategorypageproduct");
 		managecategorypage = homepage.moreInfoCategoryPage();// more info is in home page and the control goes to
 																// newspage
-		managecategorypage.newMethod().category(name).selectGroups().imageFile().saveMethod();
+		managecategorypage.newMethod().category(product).selectGroups().imageFile().saveMethod();
 		// managecategorypage.showOnTopMenu();
 		// managecategorypage.showOnLeftMenu();
 		boolean isalertavailable = managecategorypage.isAlertDisplayed();

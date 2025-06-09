@@ -2,7 +2,7 @@ package constant;
 
 public class Constant {
 
-	public static final String TESTDATAFILE = System.getProperty("user.dir") + "\\src\\test\\resources\\TestData.xlsx";
+	public static final String TESTDATAFILE = System.getProperty("user.dir") + "\\src\\test\\resources\\resources\\TestData.xlsx";
 	public static final String IMAGEDATAFILE = System.getProperty("user.dir")
 			+ "\\src\\test\\resources\\Zipperbottle.jpg";
 	public static final String LOGINCORRECTUSERNAMECORRECTPASSWORD = "Homepage is not displayed with correct username and correct password";

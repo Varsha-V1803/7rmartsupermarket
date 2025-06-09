@@ -30,7 +30,8 @@ public class ManageNewsTest extends Base {
 		homepage = loginpage.clickTheSignInButton();
 
 		// ManageNewsPage obj= new ManageNewsPage(driver);
-		String news = "Its raining today";
+		//String news = "Its raining today";
+		String news = ExcelUtility.getStringData(1, 0, "managenewspage");
 		// obj.moreInfoNewsPage();
 		managenewspage = homepage.moreInfoNewsPage();// more info is in home page and the control goes to newspage
 		managenewspage.newMethod().textField(news).save();

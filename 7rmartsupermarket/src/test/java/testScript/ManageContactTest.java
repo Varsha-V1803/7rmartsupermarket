@@ -30,11 +30,16 @@ public class ManageContactTest extends Base {
 		// loginpage.enterThePassword(password);
 		homepage = loginpage.clickTheSignInButton();
 		// ManageContactPage obj= new ManageContactPage(driver);
-		String mailid = "varsha123@gmail.com";
+		/*String mailid = "varsha123@gmail.com";//manually add datas
 		String mob = "77889900455";
 		String add = "Megha land,ktym";
 		String time = "20";
-		String delchargelmt = "30";
+		String delchargelmt = "30";*/
+		String mailid = ExcelUtility.getStringData(1, 0, "managecontactpage");//excel data read
+		String mob = ExcelUtility.getStringData(1, 1, "managecontactpage");
+		String add = ExcelUtility.getStringData(1, 2, "managecontactpage");
+		String time = ExcelUtility.getIntegerData(1, 3, "managecontactpage");
+		String delchargelmt = ExcelUtility.getIntegerData(1, 4, "managecontactpage");
 		managecontactpage = homepage.moreInfoContactPage();
 		managecontactpage.editMethod().phone(mob).editEmailField(mailid).address(add).deliveryTime(time)
 				.editEmailField(delchargelmt).updateMethod();

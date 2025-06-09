@@ -29,9 +29,13 @@ public class ManageFooterTextTest extends Base {
 		loginpage.enterTheUsername(username).enterThePassword(password);
 		homepage = loginpage.clickTheSignInButton();
 		// ManageFooterTextPage obj= new ManageFooterTextPage(driver);
-		String add = "Megha land,ktym";
+		/*String add = "Megha land,ktym";
 		String mailid = "varsha123@gmail.com";
-		String mob = "77889900455";
+		String mob = "77889900455";*/
+		String add = ExcelUtility.getStringData(1, 0, "managefooterpage");
+		String mailid = ExcelUtility.getStringData(1, 1, "managefooterpage");
+		String mob = ExcelUtility.getStringData(1, 2, "managefooterpage");
+		
 		managefootertextpage = homepage.moreInfoFooterPage();
 		managefootertextpage.editMethod().address(add).editEmailField(mailid).phone(mob).updateMethod();
 		boolean isalertavailable = managefootertextpage.isAlertDisplayed();
@@ -39,11 +43,13 @@ public class ManageFooterTextTest extends Base {
 	}
 
 	@Test(description = "Verify whether the user is able to view the updatebutton in manage footer page sucessfully")
-	public void verifyWhetherUserIsAbleToDisplayFooterTextUpdateButton()
+	public void verifyWhetherUserIsAbleToDisplayFooterTextUpdateButton() throws IOException
 
 	{
-		String username = "admin";// credentials
-		String password = "admin";
+		//String username = "admin";// credentials
+		//String password = "admin";
+		String username = ExcelUtility.getStringData(1, 0, "loginpage");
+		String password = ExcelUtility.getStringData(1, 1, "loginpage");
 		LoginPage loginpage = new LoginPage(driver);// we need to pass the credentials to the loginpage so create obj of
 													// login page and pass driver as an arg
 		loginpage.enterTheUsername(username).enterThePassword(password);
