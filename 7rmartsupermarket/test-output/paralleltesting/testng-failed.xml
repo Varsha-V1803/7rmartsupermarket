@@ -6,9 +6,10 @@
     <classes>
       <class name="testScript.ManageFooterTextTest">
         <methods>
+          <include name="verifyWhetherUserIsAbleToDisplayFooterTextUpdateButton"/>
           <include name="browserQuit"/>
-          <include name="manageFooterTextTestUpdateButtonDisplay"/>
           <include name="browserIntialization"/>
+          <include name="verifyWhetherUserIsAbleToCreateNewFooterTextInformation"/>
         </methods>
       </class> <!-- testScript.ManageFooterTextTest -->
     </classes>
